@@ -69,3 +69,39 @@ void main() {
   }
   print("$modositottSzoveg");
 }
+
+//6. feladat
+
+void main() {
+  String str = "deified";
+  String lowerCaseStr = str.toLowerCase();
+  int start = 0;
+  int end = lowerCaseStr.length - 1;
+  bool isPalindrome = true;
+  
+  while (start < end) {
+    if (lowerCaseStr[start] != lowerCaseStr[end]) {
+      isPalindrome = false;
+      break;
+    }
+    start++;
+    end--;
+  }
+
+  print(isPalindrome);
+}
+
+//7. feladat
+
+void main() {
+  String str = "O teach me how I should forget to think (1.1.224.)";
+  String betuOnly = "";
+  var szamok = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+  for(int i = 0; i < str.length; i++) {
+    if(!szamok.contains(str[i])) {
+      betuOnly += str[i];
+    }
+  }
+  print(betuOnly);
+}
