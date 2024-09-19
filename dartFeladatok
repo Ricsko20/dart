@@ -1,0 +1,71 @@
+//1. feladat
+
+void main() {
+  int currentHours = 14;
+  int currentMinutes = 34;
+  int currentSeconds = 42;
+  
+  int remainingTime = 86400 - (14*60*60 + 34 * 60 + 42);
+  
+  print("$remainingTime");
+}
+
+//2. feladat
+
+void main() {
+  String mondat = "To be, or not to be, that is the question";
+  
+  bool containsBee = mondat.contains("bee");
+  bool containsTobe = mondat.contains("to be");
+  
+  print("$containsBee, $containsTobe");
+ }
+
+//3. feladat
+
+void main() {
+  int year = 1900;
+
+  if (year % 400 == 0) {
+    print("$year is a leap year.");
+  } else if (year % 4 == 0 && year % 100 != 0) {
+    print("$year is a leap year.");
+  } else {
+    print("$year is a not leap year.");
+  }
+}
+
+//4. feladat
+
+void main() {
+  String my_string = "appleapple";
+  
+  var vowelList = ["a", "e", "o", "u", "i"];
+  int vowel = 0;
+  
+  for(int i = 0; i < my_string.length; i++) {
+    if(vowelList.contains(my_string[i])){
+        vowel += 1;
+    }
+  }
+  print("$vowel");
+}
+
+//5. feladat
+
+void main() {
+  String szoveg = "Istenem de szar a halozat";
+  String modositottSzoveg = "";
+
+  var vowelList = ["a", "e", "o", "u", "i"];
+
+  for (int i = 0; i < szoveg.length; i++) {
+    if (vowelList.contains(szoveg[i])) {
+      break;
+    }
+    else {
+      modositottSzoveg += szoveg[i]; 
+    }
+  }
+  print("$modositottSzoveg");
+}
