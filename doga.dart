@@ -53,9 +53,9 @@ void main() {
   print("Adj meg egy háromjegyű számot: ");
   int? num = int.parse(stdin.readLineSync()!);
 
-  while(num < 100 || num > 999) {
-      int? num = int.parse(stdin.readLineSync()!);
+  while(num! < 100 || num > 999) {
       print("Rossz szám! Adj meg egy másikat: ");
+      num = int.parse(stdin.readLineSync()!);
     }
     
   double negyzetSzam = sqrt(num);
